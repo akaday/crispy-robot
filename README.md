@@ -13,3 +13,22 @@ Crispy Robot is an interactive, mood-driven application that adapts its appearan
    ```bash
    git clone https://github.com/akaday/crispy-robot.git
    cd crispy-robot
+   ```
+
+## Visuals
+Here are some visuals showcasing the theme changes based on mood selection:
+
+### Happy Mood
+![Happy Mood](images/happy_mood.png)
+
+### Calm Mood
+![Calm Mood](images/calm_mood.png)
+
+### Energetic Mood
+![Energetic Mood](images/energetic_mood.png)
+
+### Focused Mood
+![Focused Mood](images/focused_mood.png)
+
+### Demo Video
+[Watch the demo video](https://example.com/demo_video)
