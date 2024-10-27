@@ -1,0 +1,10 @@
+:root {
+    --primary-color: #FFD700;
+    --secondary-color: #FF8C00;
+}
+
+body {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: background-color 0.3s, color 0.3s;
+}
