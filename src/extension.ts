@@ -1,6 +1,7 @@
 import * as vs from "vscode";
 import { SdkCommands } from "./commands/sdk";
 import { dartCodeExtensionIdentifier } from "./constants";
+import { playMusic } from "./music";
 
 export async function activate(context: vs.ExtensionContext): Promise<void> {
 	// Ensure we have a Dart extension.
@@ -19,4 +20,7 @@ export async function activate(context: vs.ExtensionContext): Promise<void> {
 
 	// Register SDK commands.
 	const sdkCommands = new SdkCommands(context, dartExt.exports);
+
+	// Play background music
+	playMusic();
 }

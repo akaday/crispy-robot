@@ -51,7 +51,10 @@
 	],
 	"main": "./out/src/extension",
 	"contributes": {
-		"commands": []
+		"commands": [],
+		"music": [],
+		"animations": [],
+		"quotes": []
 	},
 	"menus": {
 		"commandPalette": []
