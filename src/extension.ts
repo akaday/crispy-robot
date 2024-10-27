@@ -33,10 +33,31 @@ function registerMoodCommands(context: vs.ExtensionContext) {
 		const disposable = vs.commands.registerCommand(`extension.setMood${mood}`, () => {
 			changeTheme(mood);
 			playAnimation(mood);
+			playSoundEffect(mood);
 		});
 		context.subscriptions.push(disposable);
 	});
 
 	// Play background music
 	playMusic();
+}
+
+function playSoundEffect(mood: string) {
+	let sound;
+	switch(mood) {
+		case "Happy":
+			sound = "sounds/happy.mp3";
+			break;
+		case "Calm":
+			sound = "sounds/calm.mp3";
+			break;
+		case "Energetic":
+			sound = "sounds/energetic.mp3";
+			break;
+		case "Focused":
+			sound = "sounds/focused.mp3";
+			break;
+	}
+	const audio = new Audio(sound);
+	audio.play();
 }

@@ -7,6 +7,8 @@ Crispy Robot is an interactive, mood-driven application that adapts its appearan
 - **Mood Selection**: Choose from Happy, Calm, Energetic, Focused.
 - **Dynamic Color Themes**: Themes adapt based on selected mood.
 - **Interactive Elements**: Subtle animations and changes.
+- **Animations**: Custom animations for each mood.
+- **Sound Effects**: Background music and sound effects based on mood.
 
 ## Installation
 1. **Clone the Repository**:
@@ -32,3 +34,14 @@ Here are some visuals showcasing the theme changes based on mood selection:
 
 ### Demo Video
 [Watch the demo video](https://example.com/demo_video)
+
+## Interactive Elements
+Crispy Robot includes various interactive elements to enhance the user experience:
+- **Animations**: Custom animations play based on the selected mood.
+- **Sound Effects**: Background music and sound effects change according to the mood.
+
+## Usage
+To use the new features:
+1. **Select a Mood**: Use the mood selection dropdown to choose a mood.
+2. **Trigger Animations**: Click the animation button to play animations.
+3. **Enjoy the Experience**: Experience the dynamic color themes, animations, and sound effects based on your selected mood.
