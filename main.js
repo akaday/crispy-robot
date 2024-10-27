@@ -7,7 +7,12 @@ document.getElementById('moodSelect').addEventListener('change', function() {
 });
 
 document.getElementById('activateVoiceCommandButton').addEventListener('click', function() {
-    initializeVoiceCommands(handleVoiceCommand);
+    try {
+        initializeVoiceCommands(handleVoiceCommand);
+    } catch (error) {
+        console.error("Error initializing voice commands:", error);
+        displayVoiceCommandError("Voice command initialization failed. Please try again.");
+    }
 });
 
 function changeTheme(mood) {
@@ -64,4 +69,10 @@ function addItemToCart(item) {
     const listItem = document.createElement('li');
     listItem.textContent = item;
     cartItems.appendChild(listItem);
+}
+
+function displayVoiceCommandError(message) {
+    const statusElement = document.getElementById('voiceCommandStatus');
+    statusElement.textContent = message;
+    statusElement.style.color = 'red';
 }
