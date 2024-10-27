@@ -67,10 +67,14 @@
 			{
 				"command": "extension.setMoodFocused",
 				"title": "Set Mood: Focused"
-				},
-				{
+			},
+			{
 				"command": "extension.playAnimation",
 				"title": "Play Animation"
+			},
+			{
+				"command": "extension.showQuote",
+				"title": "Show Quote"
 			}
 		]
 	},
