@@ -16,6 +16,13 @@
 			"runOptions": {
 				"runOn": "folderOpen",
 			}
+		},
+		{
+			"label": "Run Tests",
+			"type": "shell",
+			"command": "npm test",
+			"group": "test",
+			"problemMatcher": []
 		}
 	]
 }
