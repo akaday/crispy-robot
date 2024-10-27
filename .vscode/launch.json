@@ -17,6 +17,22 @@
 			"skipFiles": [
 				"<node_internals>/**"
 			]
+		},
+		{
+			"name": "Run Tests",
+			"type": "node",
+			"request": "launch",
+			"program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+			"args": [
+				"--timeout",
+				"999999",
+				"--colors",
+				"${workspaceFolder}/out/test"
+			],
+			"internalConsoleOptions": "openOnSessionStart",
+			"skipFiles": [
+				"<node_internals>/**"
+			]
 		}
 	]
 }
