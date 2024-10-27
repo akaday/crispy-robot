@@ -4,6 +4,7 @@ import { dartCodeExtensionIdentifier } from "./constants";
 import { changeTheme } from "./commands/theme";
 import { playMusic } from "./music";
 import { playAnimation } from "./animations";
+import { showQuote } from "./quotes";
 
 export async function activate(context: vs.ExtensionContext): Promise<void> {
 	// Ensure we have a Dart extension.
@@ -25,6 +26,12 @@ export async function activate(context: vs.ExtensionContext): Promise<void> {
 
 	// Register mood commands
 	registerMoodCommands(context);
+
+	// Register quote command
+	const quoteDisposable = vs.commands.registerCommand("extension.showQuote", () => {
+		showQuote();
+	});
+	context.subscriptions.push(quoteDisposable);
 }
 
 function registerMoodCommands(context: vs.ExtensionContext) {
