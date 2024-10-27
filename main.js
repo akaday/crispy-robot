@@ -1,7 +1,13 @@
+import { initializeVoiceCommands, handleVoiceCommand } from './src/voiceCommands';
+
 document.getElementById('moodSelect').addEventListener('change', function() {
     const mood = this.value;
     changeTheme(mood);
     playSoundEffect(mood);
+});
+
+document.getElementById('activateVoiceCommandButton').addEventListener('click', function() {
+    initializeVoiceCommands(handleVoiceCommand);
 });
 
 function changeTheme(mood) {
@@ -51,4 +57,11 @@ function playSoundEffect(mood) {
 function playAnimation(mood) {
     // Placeholder for animation logic
     console.log(`Playing ${mood} animation`);
+}
+
+function addItemToCart(item) {
+    const cartItems = document.getElementById('cartItems');
+    const listItem = document.createElement('li');
+    listItem.textContent = item;
+    cartItems.appendChild(listItem);
 }
