@@ -51,10 +51,31 @@
 	],
 	"main": "./out/src/extension",
 	"contributes": {
+
+		"commands": [
+			{
+				"command": "extension.setMoodHappy",
+				"title": "Set Mood: Happy"
+			},
+			{
+				"command": "extension.setMoodCalm",
+				"title": "Set Mood: Calm"
+			},
+			{
+				"command": "extension.setMoodEnergetic",
+				"title": "Set Mood: Energetic"
+			},
+			{
+				"command": "extension.setMoodFocused",
+				"title": "Set Mood: Focused"
+			}
+		]
+
 		"commands": [],
 		"music": [],
 		"animations": [],
 		"quotes": []
+
 	},
 	"menus": {
 		"commandPalette": []
