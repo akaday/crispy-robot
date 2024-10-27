@@ -1,6 +1,7 @@
 import * as vs from "vscode";
 import { SdkCommands } from "./commands/sdk";
 import { dartCodeExtensionIdentifier } from "./constants";
+import { changeTheme } from "./commands/theme";
 
 export async function activate(context: vs.ExtensionContext): Promise<void> {
 	// Ensure we have a Dart extension.
@@ -19,4 +20,17 @@ export async function activate(context: vs.ExtensionContext): Promise<void> {
 
 	// Register SDK commands.
 	const sdkCommands = new SdkCommands(context, dartExt.exports);
+
+	// Register mood commands
+	registerMoodCommands(context);
+}
+
+function registerMoodCommands(context: vs.ExtensionContext) {
+	const moods = ["Happy", "Calm", "Energetic", "Focused"];
+	moods.forEach((mood) => {
+		const disposable = vs.commands.registerCommand(`extension.setMood${mood}`, () => {
+			changeTheme(mood);
+		});
+		context.subscriptions.push(disposable);
+	});
 }
